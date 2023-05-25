@@ -1,10 +1,10 @@
-/*Secret Santa Überschrift/Brandname*/
+/*Mein Tagebuch Überschrift/Brandname*/
 .brandName {
     text-decoration: none;
     color: #ffffff;
     position: fixed;
     right: 30pt;
-    font-size: 8mm;
+    font-size: 10mm;
     font-variant: small-caps;
     font-style: normal;
     font-weight: bolder;
@@ -14,7 +14,7 @@
 
 /*Balken ganz oben, auf dem Menü-Button positioniert ist */
 .navbar {
-    background-color: #060b26;
+    background-color: #7C0A02;
     height: 80px;
     display: flex;
     justify-content: start;
@@ -29,13 +29,13 @@
 }
 /* Menu verschwand */
 .nav-menu {
-    background-color: #060b26;
-    width: 300px;
-    height: 100vh;
+    background-color: #f3d4d4;
+    width: 250px;
+    height: 25vh;
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 0;
+    top: 10%;
     left: -100%;
     transition: 850ms;
 }
@@ -43,14 +43,15 @@
 /*Ausfahren des Menü */
 .nav-menu.active {
     left: 0;
-    transition: 350ms;
+    transition: 650ms;
 }
 
 /*Schrift in der Navbar*/
 .nav-text a {
     text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
+    color: #7C0A02;
+    font-size: 22px;
+    font-weight: bold;
     width: 100%;
     height: 100%;
     display: flex;
@@ -61,8 +62,8 @@
 
 /* Farbe des Menüpunkts, wenn Corser darauf landet */
 .nav-text a:hover {
-    background-color: #1a83ff;
-    padding: 15px;
+    background-color: #ffffff;
+    padding: 9px;
     width: auto;
 }
 
@@ -75,7 +76,7 @@
 /* X (Schliessen)-Details */
 .navbar-toggle {
     width: auto;
-    height: 50px;
+    height: 20px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -84,7 +85,7 @@
 
 /* Farbe, wenn Corser auf Schließen Button kommt */
 .navbar-toggle:hover {
-    background-color: #1a83ff;
+    background-color:  #ffffff;
 }
 
 span {

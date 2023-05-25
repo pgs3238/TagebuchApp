@@ -17,39 +17,44 @@ function Navbar() {
 
     return (
         <>
-            <IconContext.Provider value={{color: '#fff'}}>
+
                 <div className="navbar">
+                    <IconContext.Provider value={{color: '#fff'}}>
 
-                    <Link to="#" className='menu-bars'>
-                        <FaIcons.FaBars onClick={showSidebar}/>
-                    </Link>
+                        <Link to="#" className='menu-bars'>
+                            <FaIcons.FaBars onClick={showSidebar}/>
+                        </Link>
 
-                    <a className="brandName">
-                        Secret <GiIcons.GiPresent size='20px'/> Santa
-                    </a>
+                        <a className="brandName">
+                            Mein <GiIcons.GiBookmarklet size='28px'/> Tagebuch
+                        </a>
+                    </IconContext.Provider>
 
                 </div>
 
+
                 <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                    <ul className='nav-menu-items' onClick={showSidebar}>
-                        <li className="navbar-toggle">
-                            <Link to="#" className='menu-bars'>
-                                <AiIcons.AiOutlineClose/>
-                            </Link>
-                        </li>
-                        {SidebarData.map((item, index) => {
-                            return (
-                                <li key={index} className={item.cName}>
-                                    <Link to={item.path}>
-                                        {item.icon}
-                                        <span>{item.title}</span>
-                                    </Link>
-                                </li>
-                            )
-                        })}
-                    </ul>
+                    <IconContext.Provider value={{color: '#7C0A02'}}>
+                        <ul className='nav-menu-items' onClick={showSidebar}>
+                            <li className="navbar-toggle">
+                                <Link to="#" className='menu-bars'>
+                                    <FaIcons.FaWindowClose size="28px"/>
+                                </Link>
+                            </li>
+                            {SidebarData.map((item, index) => {
+                                return (
+                                    <li key={index} className={item.cName}>
+                                        <Link to={item.path}>
+                                            {item.icon}
+                                            <span>{item.title}</span>
+                                        </Link>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </IconContext.Provider>
                 </nav>
-            </IconContext.Provider>
+
 
         </>
     );

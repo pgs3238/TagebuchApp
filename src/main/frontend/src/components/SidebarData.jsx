@@ -22,7 +22,7 @@ export const SidebarData = [
     {
         title: 'Registrieren',
         path: '/registrierung',
-        icon: <FaIcons.FaRegRegistered/>,
+        icon: <MdIcons.MdManageAccounts/>,
         cName: 'nav-text'
     },
 
