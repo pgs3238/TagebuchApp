@@ -11,13 +11,13 @@ public class BuchDAO extends GenericDAO<Buch> {
     @Inject
     public BuchDAO(EntityManager em) {super(em, Buch.class);}
 
-    public void delete(Buch buch) {super.delete(buch.getBuchId(),Buch.class);}
+   // public void delete(Buch buch) {super.delete(buch.getBuchId(),Buch.class);}
 
     public Buch find(int buchID) {return super.find(buchID);}
 
     public boolean addUserToBuch(User user, Buch buch){
         try {
-            buch.getUser().add(user);
+         //   buch.getUser().add(user);
             user.getBuch().add(buch);
             em.merge(user);
 

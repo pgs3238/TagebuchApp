@@ -1,0 +1,92 @@
+/*Secret Santa Überschrift/Brandname*/
+.brandName {
+    text-decoration: none;
+    color: #ffffff;
+    position: fixed;
+    right: 30pt;
+    font-size: 8mm;
+    font-variant: small-caps;
+    font-style: normal;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    margin-bottom: 11px;
+}
+
+/*Balken ganz oben, auf dem Menü-Button positioniert ist */
+.navbar {
+    background-color: #060b26;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+/* Position des Menü-Icon */
+.menu-bars {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+}
+/* Menu verschwand */
+.nav-menu {
+    background-color: #060b26;
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+}
+
+/*Ausfahren des Menü */
+.nav-menu.active {
+    left: 0;
+    transition: 350ms;
+}
+
+/*Schrift in der Navbar*/
+.nav-text a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 7px 16px;
+    border-radius: 9px;
+}
+
+/* Farbe des Menüpunkts, wenn Corser darauf landet */
+.nav-text a:hover {
+    background-color: #1a83ff;
+    padding: 15px;
+    width: auto;
+}
+
+/* Menü so groß genug, damit Rahmen der Menüpunkte nicht größer sind als das Fenster */
+.nav-menu-items {
+    width: 100%;
+    list-style-type: none;
+}
+
+/* X (Schliessen)-Details */
+.navbar-toggle {
+    width: auto;
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Farbe, wenn Corser auf Schließen Button kommt */
+.navbar-toggle:hover {
+    background-color: #1a83ff;
+}
+
+span {
+    margin-left: 40px;
+}

@@ -1,17 +1,23 @@
 package tagebuch.security;
 
 import javax.annotation.security.PermitAll;
+import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.SecurityContext;
 
-@Path("/api/public")
+@Path("/api/users")
 public class UserResource {
     @GET
-    @PermitAll
+    @RolesAllowed({"admin","user"})
     @Produces(MediaType.APPLICATION_JSON)
-    public String publicResource(){
-        return "public";
+    public String userResource(@Context SecurityContext securityContext) {
+        if (!Permissions.check(securityContext)){ //TODO pathparam queryparam
+            return "Access denied!";
+        }
+        return securityContext.getUserPrincipal().getName();
     }
 }
