@@ -25,6 +25,7 @@ function Layout() {
         if (inputs.passwort !== inputs.repasswort) {
             alert("pass?")
             return;
+           // navigate("/anmelden");
         }
 
         let query = await fetch("/users/register", {

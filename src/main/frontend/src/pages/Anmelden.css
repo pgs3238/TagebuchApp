@@ -19,3 +19,15 @@
 .kontoanlegen{
     text-align: center;
 }
+
+.button {
+    font-size: 18px;
+    border-radius: 4px;
+    background-color: #1e73be;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 4px solid #1e80be;
+    width: 240px;
+    margin: 12px;
+}

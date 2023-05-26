@@ -38,7 +38,7 @@ function Navbar() {
                         <ul className='nav-menu-items' onClick={showSidebar}>
                             <li className="navbar-toggle">
                                 <Link to="#" className='menu-bars'>
-                                    <FaIcons.FaWindowClose size="28px"/>
+                                    <FaIcons.FaWindowClose size="26px"/>
                                 </Link>
                             </li>
                             {SidebarData.map((item, index) => {

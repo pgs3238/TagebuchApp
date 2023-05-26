@@ -65,7 +65,7 @@ function Layout() {
             </div>
             <br/>
             <div className="kontoanlegen">
-                <input type="button" id="kontoanlegen" value="Neues Konto Anlegen" onClick={neuesKonto}/>
+                <input type="button" id="kontoanlegen" value="Neues Konto Anlegen" onClick={neuesKonto} />
             </div>
         </form>
 
