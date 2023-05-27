@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import Registrieren from "./pages/Registrieren";
 import Anmelden from "./pages/Anmelden";
+import Buch from "./pages/Buch";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -40,6 +41,7 @@ export default function App() {
                     <Route path="anmelden" element={<Anmelden />} />
                     <Route path="registrierung" element={<Registrieren />} />
                     <Route path="*" element={<NoPage />} />
+                    <Route path="buch" element={<Buch />} />
 
                 </Route>
             </Routes>

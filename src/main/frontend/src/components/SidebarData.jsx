@@ -2,7 +2,7 @@ import React from "react";
 import * as AiIcons from "react-icons/ai";
 import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
-import * as HiIcons from "react-icons/hi";
+import * as BiIcons from "react-icons/bi";
 
 export const SidebarData = [
     {
@@ -23,6 +23,13 @@ export const SidebarData = [
         title: 'Registrieren',
         path: '/registrierung',
         icon: <MdIcons.MdManageAccounts/>,
+        cName: 'nav-text'
+    },
+
+    {
+        title: 'Tagebuch',
+        path: '/buch',
+        icon: <BiIcons.BiBookAdd/>,
         cName: 'nav-text'
     },
 
