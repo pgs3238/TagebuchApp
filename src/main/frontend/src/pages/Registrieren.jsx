@@ -23,10 +23,11 @@ function Layout() {
         // alert(JSON.stringify(inputs));
 
         if (inputs.passwort !== inputs.repasswort) {
-            alert("pass?")
+            alert("Die Passwörter sind nicht identisch!")
             return;
            // navigate("/anmelden");
         }
+        alert("Neuer Nutzer wurde angelegt!")
 
         let query = await fetch("/users/register", {
             method: "POST",
@@ -66,6 +67,7 @@ function Layout() {
                     id="vname"
                     name="vorname"
                     onChange={handleChange}
+                    required
                 />
             </div>
             <br/>
@@ -78,6 +80,7 @@ function Layout() {
                     id="nachname"
                     name="nachname"
                     onChange={handleChange}
+                    required
                 />
             </div>
             <br/>
@@ -90,6 +93,7 @@ function Layout() {
                     id="email"
                     name="email"
                     onChange={handleChange}
+                    required
                 />
             </div>
             <br/>
@@ -102,6 +106,7 @@ function Layout() {
                     id="passwort"
                     name="passwort"
                     onChange={handleChange}
+                    required
                 />
             </div>
             <br/>
@@ -114,6 +119,7 @@ function Layout() {
                     id="repasswort"
                     name="repasswort"
                     onChange={handleChange}
+                    required
                 />
             </div>
             <br/>

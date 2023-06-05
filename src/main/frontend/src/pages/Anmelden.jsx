@@ -44,6 +44,7 @@ function Layout() {
                     placeholder="E-Mail-Adresse"
                     id="email"
                     name="j_username"
+                    required
 
                 />
             </div>
@@ -56,6 +57,7 @@ function Layout() {
                     placeholder="Passwort"
                     id="passwort"
                     name="j_password"
+                    required
 
                 />
             </div>
