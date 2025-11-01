@@ -1,78 +1,97 @@
-# apptesting-app
+# 📘 Tagebuch-App
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+> Ein Studienprojekt zur Demonstration eines einfachen Login-Systems mit Cookie-Verwaltung.  
+> Entwickelt im Rahmen des Kurses **Projektmanagement**.
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+---
+### 🔑 Login Screen
+![Login Screen](assets/LoginPage.png)
 
-## Running the application in dev mode
+---
 
-You can run your application in dev mode that enables live coding using:
+## 🧭 Motivation
+
+Ziel des Projekts war es, ein funktionierendes Login-System umzusetzen, das Nutzerdaten mithilfe von 
+Cookies speichert und so den Zugang zur Webanwendung ermöglicht. Sicherheitsaspekte standen dabei 
+**nicht im Vordergrund**, sondern die funktionale Umsetzung und das Verständnis von Projektplanung,
+-umsetzung und -dokumentation.
+
+---
+
+## ⚙️ Features
+
+- 🔐 Benutzer-Login & Logout
+- 🍪 Speicherung der Nutzerdaten über Cookies
+- 🌐 Zugriff auf geschützte Bereiche nach Login
+- ❌ Automatisches Löschen des Cookies bei Logout
+
+---
+
+## 🧰 Technologie-Stack
+
+| Bereich | Technologie / Version             |
+|:--------|:----------------------------------|
+| **Backend** | Quarkus `2.16.6`, Gradle `3.5.0`  |
+| **Frontend / Build** | React `18.2.0`, Node.js `18.12.1` |
+| **Datenbank** | PostgreSQL (Docker)               |
+| **Sprache** | Java `17`                         |
+
+**Verwendete Quarkus-Erweiterungen:**
+```gradle
+implementation 'io.quarkus:quarkus-resteasy-reactive-jsonb'
+implementation 'io.quarkus:quarkus-hibernate-orm'
+implementation 'io.quarkus:quarkus-hibernate-validator'
+implementation 'io.quarkus:quarkus-smallrye-openapi'
+implementation 'io.quarkus:quarkus-jdbc-postgresql'
+implementation 'io.quarkus:quarkus-security-jpa'
+implementation 'io.quarkus:quarkus-arc'
+testImplementation 'io.quarkus:quarkus-junit5'
+testImplementation 'io.rest-assured:rest-assured'
+```
+> 🧪 Ordner für test und native-test sind vorhanden, enthalten aber derzeit keine implementierten Tests.
+
+---
+
+## 🛠️ Installation & Setup
+Voraussetzungen
+
+- Docker installiert und lauffähig
+- PostgreSQL läuft in einem Container
+- Java 17, Gradle, Node.js installiert (oder über das Build-Skript)
+
+Schritte
 ```shell script
+#Repository klonen
+git clone https://github.com/pgs3238/TagebuchApp.git
+cd tagebuchapp
+
+# Build ausführen (installiert Node, npm-Abhängigkeiten und führt Build aus)
+./gradlew build
+
+# Anwendung im Entwicklungsmodus starten
 ./gradlew quarkusDev
 ```
+---
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+## 🚀 Nutzung
 
-## Packaging and running the application
+1. Anwendung starten
+2. Im Browser die Login-Seite öffnen
+3. Benutzerkonto anlegen
+4. Benutzer anmelden → Cookie wird gesetzt
+5. Zugriff auf geschützte Seiten möglich
+6. Logout → Cookie wird gelöscht
 
-The application can be packaged using:
-```shell script
-./gradlew build
-```
-It produces the `quarkus-run.jar` file in the `build/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `build/quarkus-app/lib/` directory.
+---
 
-The application is now runnable using `java -jar build/quarkus-app/quarkus-run.jar`.
+## ⚠️ Hinweise
 
-If you want to build an _über-jar_, execute the following command:
-```shell script
-./gradlew build -Dquarkus.package.type=uber-jar
-```
+> 🔒 Dieses Projekt dient ausschließlich zu Lern- und Demonstrationszwecken.
+Die Cookie-basierte Speicherung von Nutzerdaten ist nicht für produktive Umgebungen geeignet.
 
-The application, packaged as an _über-jar_, is now runnable using `java -jar build/*-runner.jar`.
+---
 
-## Creating a native executable
-
-You can create a native executable using: 
-```shell script
-./gradlew build -Dquarkus.package.type=native
-```
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./gradlew build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./build/apptesting-app-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/gradle-tooling.
-
-## Related Guides
-
-- Hibernate ORM ([guide](https://quarkus.io/guides/hibernate-orm)): Define your persistent model with Hibernate ORM and JPA
-- Hibernate Validator ([guide](https://quarkus.io/guides/validation)): Validate object properties (field, getter) and method parameters for your beans (REST, CDI, JPA)
-- SmallRye OpenAPI ([guide](https://quarkus.io/guides/openapi-swaggerui)): Document your REST APIs with OpenAPI - comes with Swagger UI
-- RESTEasy Classic ([guide](https://quarkus.io/guides/resteasy)): REST endpoint framework implementing JAX-RS and more
-- JDBC Driver - PostgreSQL ([guide](https://quarkus.io/guides/datasource)): Connect to the PostgreSQL database via JDBC
-
-## Provided Code
-
-### Hibernate ORM
-
-Create your first JPA entity
-
-[Related guide section...](https://quarkus.io/guides/hibernate-orm)
-
-
-
-### RESTEasy JAX-RS
-
-Easily start your RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
-
-### RESTEasy Reactive
-
-Easily start your Reactive RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+## 🧑‍💻 Autor & Kontakt
+| Name                | Kontakt                                                                                                                                                                |
+|:--------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paul-Gerhard Siegel | [GitHub](https://github.com/pgs3238) · [LinkedIn](https://www.linkedin.com/in/paul-gerhard-siegel-719a4512/) · [Xing](https://www.xing.com/profile/PaulGerhard_Siegel) |
