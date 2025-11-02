@@ -31,7 +31,7 @@ Cookies speichert und so den Zugang zur Webanwendung ermöglicht. Sicherheitsasp
 
 | Bereich | Technologie / Version             |
 |:--------|:----------------------------------|
-| **Backend** | Quarkus `2.16.6`, Gradle `3.5.0`  |
+| **Backend** | Quarkus `2.16.6`, Gradle `7.5.1`  |
 | **Frontend / Build** | React `18.2.0`, Node.js `18.12.1` |
 | **Datenbank** | PostgreSQL (Docker)               |
 | **Sprache** | Java `17`                         |
